@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Présentation - {% block title %}{% endblock %}</title>
+        <meta name="keywords" content="toulouse,by,night,agenda,soiree,sortir,etudiant,musique,theatre" />
+        <meta name="description" content="gnagnagna" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Toulouse By Night" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://.fr" />
+        <meta property="og:image" content="http://" />
+        <link rel="author" href="https://plus.google.com/u/0/111034851249365202386/posts"/>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <!-- CSS -->
+        
+        {% stylesheets 
+                'css/bootstrap.min.css'
+                'css/font-awesome.min.css'
+                'css/style.css'
+
+                filter='cssrewrite,?yui_css'
+                output='prod/css/base.css'
+        %}
+                <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" >
+        {% endstylesheets %}
+       
+        {% block css %}
+        {% endblock %}
+    </head>
+    <body>
+        {% include "::menu.html.twig" %}
+        <div class="container">
+            <h1 class="titrebloc">{% block titre%}{% endblock %}</h1>
+            <hr/>
+
+            {# On affiche les messages flash que définissent les contrôleurs du bundle #}
+            {% for key, messages in app.session.flashbag.all() %}
+                    {% for message in messages %}
+                            <div class="alert alert-{{ key == "error" ? "danger" : key }}">
+                                <i class="fa fa-{{ key == 'info' ? 'info-sign' : (key == 'error' ? 'warning' : key == 'success' ? 'check' : key) }}"></i> 
+                                {{ message }}
+                            </div>
+                    {% endfor %}
+            {% endfor %}
+
+            {% block body %}{% endblock %}
+        </div>
+        <!-- JavaScript -->
+        <!--[if lte IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif] -->
+
+        {% javascripts 
+            'js/jquery-1.8.3.min.js'
+            'js/bootstrap.min.js'
+            'js/scripts.js'
+
+            filter='?yui_js'
+            output='prod/js/base.js'
+        %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+            
+        {% block js %}				
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Page non trouvée (Erreur 404)</title>
+		<link rel="stylesheet" href="{{ asset('css/erreurs/404.css') }}" type="text/css" media="screen" >
+    </head>
+    <body>
+		<div class="text-center erreur">
+			<img src="{{ asset('img/error.png') }}" alt=""/>
+			<h1>Oops! Une erreur est survenue</h1>
+			<h2>La page que vous demandez est introuvable</h2>
+			
+			<p>
+				Si vous pensez que c'est une erreur, veuillez le signaler à l'adresse <a href="mailto:{{email}}?subject=J'ai trouvé une erreur 404 sur sainthillier.fr">{{ email }}</a>, et je la réparerais dès que possible.
+			</p>
+		</div>
+    </body>
+</html>

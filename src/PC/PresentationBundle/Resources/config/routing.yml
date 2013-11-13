@@ -1,0 +1,3 @@
+pc_presentation_homepage:
+    pattern:  /
+    defaults: { _controller: PCPresentationBundle:Default:index }

@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: presentation_com
+    database_user: com_user
+    database_password: GzqeTmWGSpYR87sh
+    mailer_transport: smtp
+    mailer_host: ns0.ovh.net
+    mailer_user: guillaume@sainthillier.fr
+    mailer_password: une_autre_fois
+    locale: fr
+    secret: a48f082ae3734d966bab846f78a44536a5f0138b

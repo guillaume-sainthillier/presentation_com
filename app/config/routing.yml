@@ -1,0 +1,3 @@
+pc_presenstation:
+    resource: "@PCPresentationBundle/Resources/config/routing.yml"
+    prefix:   /
