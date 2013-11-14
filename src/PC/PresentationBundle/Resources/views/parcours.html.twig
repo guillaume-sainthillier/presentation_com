@@ -1,15 +1,59 @@
 {% extends "::base.html.twig" %}
 
 
-{% block titre %}
-Accueil
-{%endblock %}
-
 {% block title %}
-Accueil
+Parcours
+{%endblock %}
+
+{% block body_container_header %}
+Parcours professionnel
 {%endblock %}
 
 
-{% block body %}
-Contenu ici
+{% block body_container_main %}
+<div class="timelapse">
+    <h2 class="titre">RÉSUMÉ</h2>
+    <ul class="timeline">
+        <li class="annee">2013</li>
+        <li class="event">
+            <h3 class="titre">Senior Web Designer</h3>
+            <span class="mois"><i class="fa fa-calendar"></i> September 2007 - present</span>
+            <p>Dramatically reconceptualize diverse imperatives whereas out-of-the-box manufactured products. Dynamically negotiate seamless data via proactive ideas. Globally seize revolutionary imperatives rather than standardized niches.</p>
+        </li>
+        <li class="event">
+            <h3 class="titre">Web Developer &amp; Designer</h3>
+            <span class="mois"><i class="fa fa-calendar"></i> January 2007 - September 2007</span>
+            <p>Dynamically procrastinate proactive methodologies and multimedia based materials. Phosfluorescently incentivize magnetic leadership skills before inexpensive users.</p>
+        </li>
+        <li class="annee">2006</li>
+        <li class="event">
+            <h3 class="titre">Internship Program at Visual Dream Inc.</h3>
+            <span class="mois"><i class="fa fa-calendar"></i> August 2006 - December 2006</span>
+            <p>Globally transition unique solutions vis-a-vis dynamic niche markets. Interactively recaptiualize superior leadership without end-to-end catalysts for change. Globally extend worldwide data without quality. Efficiently disseminate premium markets for strategic initiatives. Completely orchestrate effective e-business and unique partnerships.</p>
+        </li>
+        <li class="event">
+            <h3 class="titre">Freelance Project</h3>
+            <span class="mois"><i class="fa fa-calendar"></i> June 2006 - August 2006</span>
+            <p>Globally transition unique solutions vis-a-vis dynamic niche markets. Interactively recaptiualize superior leadership without end-to-end catalysts for change. Globally extend worldwide data without quality. Efficiently disseminate premium markets for strategic initiatives. Completely orchestrate effective e-business and unique partnerships.</p>					
+        </li>
+        <li class="annee">2003</li>
+        <li class="event">
+            <h3 class="titre">University of Design</h3>
+            <span class="mois"><i class="fa fa-calendar"></i> October 2003 - May 2006</span>
+            <p> Globally extend worldwide data without quality. Efficiently disseminate premium markets for strategic initiatives. Completely orchestrate effective e-business and unique partnerships.</p>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block css %}
+    {% stylesheets 
+        'css/timelapse.css'
+
+        filter='cssrewrite,?yui_css'
+        output='prod/css/timelapse.css'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />
+    {% endstylesheets %}
 {% endblock %}

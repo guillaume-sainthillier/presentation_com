@@ -4,10 +4,10 @@ namespace PC\PresentationBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class PageController extends Controller
 {
-    public function indexAction()
+    public function indexAction($page)
     {
-        return $this->render('PCPresentationBundle::index.html.twig', array());
+        return $this->render('PCPresentationBundle::'.$page.'.html.twig', array("page" => $page));
     }
 }

@@ -283,6 +283,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AsseticBundle', 'C:/wamp/www/presentation_com/app/Resources/AsseticBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'AsseticBundle', 'C:\\wamp\\www\\presentation_com\\vendor\\symfony\\assetic-bundle\\Symfony\\Bundle\\AsseticBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'DoctrineBundle', 'C:/wamp/www/presentation_com/app/Resources/DoctrineBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'DoctrineBundle', 'C:\\wamp\\www\\presentation_com\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioFrameworkExtraBundle', 'C:/wamp/www/presentation_com/app/Resources/SensioFrameworkExtraBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioFrameworkExtraBundle', 'C:\\wamp\\www\\presentation_com\\vendor\\sensio\\framework-extra-bundle\\Sensio\\Bundle\\FrameworkExtraBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'OryzoneBoilerplateBundle', 'C:/wamp/www/presentation_com/app/Resources/OryzoneBoilerplateBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'OryzoneBoilerplateBundle', 'C:\\wamp\\www\\presentation_com\\vendor\\oryzone\\boilerplate-bundle\\Oryzone\\Bundle\\BoilerplateBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'PCPresentationBundle', 'C:/wamp/www/presentation_com/app/Resources/PCPresentationBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'PCPresentationBundle', 'C:\\wamp\\www\\presentation_com\\src\\PC\\PresentationBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', 'C:/wamp/www/presentation_com/app/Resources/WebProfilerBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', 'C:\\wamp\\www\\presentation_com\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', 'C:/wamp/www/presentation_com/app/Resources/SensioDistributionBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', 'C:\\wamp\\www\\presentation_com\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
@@ -2854,7 +2855,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\HttpKernelExtension($this->get('fragment.handler')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\FormExtension(new \Symfony\Bridge\Twig\Form\TwigRenderer(new \Symfony\Bridge\Twig\Form\TwigRendererEngine(array(0 => 'form_div_layout.html.twig')), $this->get('form.csrf_provider', ContainerInterface::NULL_ON_INVALID_REFERENCE))));
         $instance->addExtension(new \Twig_Extension_Debug());
-        $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), $this->get('templating.name_parser'), true, array(), array(0 => 'FrameworkBundle', 1 => 'SecurityBundle', 2 => 'TwigBundle', 3 => 'MonologBundle', 4 => 'SwiftmailerBundle', 5 => 'AsseticBundle', 6 => 'DoctrineBundle', 7 => 'SensioFrameworkExtraBundle', 8 => 'PCPresentationBundle', 9 => 'WebProfilerBundle', 10 => 'SensioDistributionBundle', 11 => 'SensioGeneratorBundle'), $this->get('assetic.value_supplier.default', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
+        $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), $this->get('templating.name_parser'), true, array(), array(0 => 'FrameworkBundle', 1 => 'SecurityBundle', 2 => 'TwigBundle', 3 => 'MonologBundle', 4 => 'SwiftmailerBundle', 5 => 'AsseticBundle', 6 => 'DoctrineBundle', 7 => 'SensioFrameworkExtraBundle', 8 => 'OryzoneBoilerplateBundle', 9 => 'PCPresentationBundle', 10 => 'WebProfilerBundle', 11 => 'SensioDistributionBundle', 12 => 'SensioGeneratorBundle'), $this->get('assetic.value_supplier.default', ContainerInterface::NULL_ON_INVALID_REFERENCE)));
         $instance->addExtension(new \Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension());
         $instance->addGlobal('app', $this->get('templating.globals'));
 
@@ -2905,6 +2906,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('C:\\wamp\\www\\presentation_com\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views', 'Twig');
         $instance->addPath('C:\\wamp\\www\\presentation_com\\vendor\\symfony\\swiftmailer-bundle\\Symfony\\Bundle\\SwiftmailerBundle/Resources/views', 'Swiftmailer');
         $instance->addPath('C:\\wamp\\www\\presentation_com\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views', 'Doctrine');
+        $instance->addPath('C:\\wamp\\www\\presentation_com\\vendor\\oryzone\\boilerplate-bundle\\Oryzone\\Bundle\\BoilerplateBundle/Resources/views', 'OryzoneBoilerplate');
         $instance->addPath('C:\\wamp\\www\\presentation_com\\src\\PC\\PresentationBundle/Resources/views', 'PCPresentation');
         $instance->addPath('C:\\wamp\\www\\presentation_com\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('C:\\wamp\\www\\presentation_com\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3338,6 +3340,7 @@ class appDevDebugProjectContainer extends Container
                 'AsseticBundle' => 'Symfony\\Bundle\\AsseticBundle\\AsseticBundle',
                 'DoctrineBundle' => 'Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle',
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
+                'OryzoneBoilerplateBundle' => 'Oryzone\\Bundle\\BoilerplateBundle\\OryzoneBoilerplateBundle',
                 'PCPresentationBundle' => 'PC\\PresentationBundle\\PCPresentationBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
@@ -3726,10 +3729,11 @@ class appDevDebugProjectContainer extends Container
                 5 => 'AsseticBundle',
                 6 => 'DoctrineBundle',
                 7 => 'SensioFrameworkExtraBundle',
-                8 => 'PCPresentationBundle',
-                9 => 'WebProfilerBundle',
-                10 => 'SensioDistributionBundle',
-                11 => 'SensioGeneratorBundle',
+                8 => 'OryzoneBoilerplateBundle',
+                9 => 'PCPresentationBundle',
+                10 => 'WebProfilerBundle',
+                11 => 'SensioDistributionBundle',
+                12 => 'SensioGeneratorBundle',
             ),
             'assetic.twig_extension.class' => 'Symfony\\Bundle\\AsseticBundle\\Twig\\AsseticExtension',
             'assetic.twig_formula_loader.class' => 'Assetic\\Extension\\Twig\\TwigFormulaLoader',
