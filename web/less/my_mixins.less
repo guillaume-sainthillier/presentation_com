@@ -1,0 +1,43 @@
+.my_keyframes(@variable)
+{
+    .animation-keyframes (@variable, 0%, ~"@{width_@{variable}}", @variable 2.5s ease-out);
+}
+
+.my_width(@variable)
+{
+    .@{variable} { 
+        width: ~"@{width_@{variable}}";
+    }
+}
+
+
+
+//.animation-keyframes (html5, 0%, @width_html5, html5 2.5s ease-out);
+
+.keyframes (@name, @from, @to, @vendor:"", @bind:"") { 
+  @keyf: ~"@{bind}@@{vendor}keyframes @{name} { `'\n'`from ";
+  @{keyf} {
+      .from(@from);
+        }
+      to {
+        .to(@to);
+      }
+}
+
+.animation-keyframes (@name, @from, @to, @anim-selector) {
+  @bind: "} `'\n'`";
+  .keyframes (@name, @from, @to, "-moz-");
+  .keyframes (@name, @from, @to, "-webkit-", @bind);
+  .keyframes (@name, @from, @to, "-o-", @bind);
+  .keyframes (@name, @from, @to, "-ms-", @bind);
+  .keyframes (@name, @from, @to, "", @bind);
+  @anim: ~"} `'\n'`.@{name}";
+  @{anim} {
+    -moz-animation: @anim-selector;
+    -webkit-animation: @anim-selector;
+    -o-animation: @anim-selector;
+    -ms-animation: @anim-selector;
+    animation: @anim-selector;
+  }
+}
+

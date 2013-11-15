@@ -1,0 +1,105 @@
+@import './my_mixins.less';
+@import 'bs/mixins.less';
+@import 'bs/variables.less';
+
+
+@width_php: 90%;
+@width_html5: 80%;
+@width_mysql: 75%;
+@width_jquery: 70%;
+
+@width_java: 60%;
+@width_css: 65%;
+@width_ruby: 50%;
+@width_cpp: 40%;
+
+
+@height_bar: 25px;
+@color_principal: darken(@brand-primary,5%);
+@color_secondaire: color('white');
+@bg_principal: #111;
+
+.skills {
+
+    .row {
+        padding: 20px;
+    }
+
+    .col {
+        padding: 0;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        list-style: none;
+
+        li {
+            //background: @bg_principal;
+            height: @height_bar;
+            border-radius: 3px;
+            border-left: 1px solid #111;
+            border-top: 1px solid #111;
+            border-right: 1px solid #333;
+            border-bottom: 1px solid #333;
+            margin-bottom: 70px;
+
+            span.expand { 
+                height: (@height_bar - 6px);
+                margin: 2px 0;                
+                position: absolute;
+                background-color: @color_principal;
+                box-shadow: 0px 0px 10px 1px rgba(red(@color_principal),green(@color_principal),blue(@color_principal),0.75);
+            }
+
+            .my_width(~'html5');
+            .my_width(~'php');
+            .my_width(~'java');
+            .my_width(~'jquery');
+            .my_width(~'ruby');
+            .my_width(~'mysql');
+            .my_width(~'cpp');
+            .my_width(~'html5');
+            .my_width(~'css');
+
+            em {
+                position: relative;
+                top: -30px;
+            }
+        }
+    }
+}
+
+.my_keyframes(~'html5');
+.my_keyframes(~'php');
+.my_keyframes(~'java');
+.my_keyframes(~'jquery');
+.my_keyframes(~'ruby');
+.my_keyframes(~'mysql');
+.my_keyframes(~'cpp');
+.my_keyframes(~'html5');
+.my_keyframes(~'css');
+
+
+
+
+
+.from (@width) {
+  width: @width;
+}
+.to (@width) {
+  width: @width;
+} 
+
+.skills(@pourcentage)
+{
+    0%
+    {	
+        width: 0px;
+    }
+    100%
+    {
+        width: @pourcentage;
+    }
+}

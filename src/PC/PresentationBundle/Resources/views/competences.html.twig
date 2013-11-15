@@ -1,0 +1,77 @@
+{% extends "::base.html.twig" %}
+
+
+{% block title %}
+Mes compétences
+{%endblock %}
+
+{% block body_container_header %}
+Mes compétences
+{%endblock %}
+
+{% 
+    set  skill = [
+
+    ]
+%}
+
+{% block body_container_main %}
+<div class="skills  well-lg">
+    <div class="row">
+        <div class="col-xs-4 col">            
+            <ul>
+                <li>
+                    <span class="expand php"></span>
+                    <em>PHP</em>
+               </li>
+                <li>
+                    <span class="expand html5"></span>
+                    <em>HTML 5</em>
+               </li>
+               <li>
+                    <span class="expand mysql"></span>
+                    <em>MySQL</em>
+               </li>               
+               <li>
+                    <span class="expand jquery"></span>
+                    <em>jQuery</em>
+               </li>
+            </ul>
+        </div>
+        
+        <div class="col-xs-4 col-xs-offset-2 col">            
+            <ul>
+                <li>
+                    <span class="expand css"></span>
+                    <em>CSS</em>
+               </li>
+                <li>
+                    <span class="expand java"></span>
+                    <em>Java</em>
+               </li>
+                <li>
+                    <span class="expand ruby"></span>
+                    <em>Ruby</em>
+               </li>               
+               <li>
+                    <span class="expand cpp"></span>
+                    <em>C/C++</em>
+               </li>
+            </ul>
+        </div>
+        
+    </div>    
+</div>
+{% endblock %}
+
+
+{% block css %}
+    {% stylesheets 
+        'css/competences.css'
+
+        filter='cssrewrite,?yui_css'
+        output='prod/css/competences.css'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />
+    {% endstylesheets %}
+{% endblock %}

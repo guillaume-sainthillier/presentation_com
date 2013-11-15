@@ -1,0 +1,482 @@
+.skills .row {
+  padding: 20px;
+}
+.skills .col {
+  padding: 0;
+}
+.skills ul {
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  list-style: none;
+}
+.skills ul li {
+  height: 25px;
+  border-radius: 3px;
+  border-left: 1px solid #111;
+  border-top: 1px solid #111;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  margin-bottom: 70px;
+}
+.skills ul li span.expand {
+  height: 19px;
+  margin: 2px 0;
+  position: absolute;
+  background-color: #357ebd;
+  box-shadow: 0px 0px 10px 1px rgba(53, 126, 189, 0.75);
+}
+.skills ul li .html5 {
+  width: 80%;
+}
+.skills ul li .php {
+  width: 90%;
+}
+.skills ul li .java {
+  width: 60%;
+}
+.skills ul li .jquery {
+  width: 70%;
+}
+.skills ul li .ruby {
+  width: 50%;
+}
+.skills ul li .mysql {
+  width: 75%;
+}
+.skills ul li .cpp {
+  width: 40%;
+}
+.skills ul li .html5 {
+  width: 80%;
+}
+.skills ul li .css {
+  width: 65%;
+}
+.skills ul li em {
+  position: relative;
+  top: -30px;
+}
+@-moz-keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+@-webkit-keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+@-o-keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+@-ms-keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+@keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+.html5 {
+  -moz-animation: html5 2.5s ease-out;
+  -webkit-animation: html5 2.5s ease-out;
+  -o-animation: html5 2.5s ease-out;
+  -ms-animation: html5 2.5s ease-out;
+  animation: html5 2.5s ease-out;
+}
+@-moz-keyframes php { 
+from {
+  width: 0%;
+}
+to {
+  width: 90%;
+}
+} 
+@-webkit-keyframes php { 
+from {
+  width: 0%;
+}
+to {
+  width: 90%;
+}
+} 
+@-o-keyframes php { 
+from {
+  width: 0%;
+}
+to {
+  width: 90%;
+}
+} 
+@-ms-keyframes php { 
+from {
+  width: 0%;
+}
+to {
+  width: 90%;
+}
+} 
+@keyframes php { 
+from {
+  width: 0%;
+}
+to {
+  width: 90%;
+}
+} 
+.php {
+  -moz-animation: php 2.5s ease-out;
+  -webkit-animation: php 2.5s ease-out;
+  -o-animation: php 2.5s ease-out;
+  -ms-animation: php 2.5s ease-out;
+  animation: php 2.5s ease-out;
+}
+@-moz-keyframes java { 
+from {
+  width: 0%;
+}
+to {
+  width: 60%;
+}
+} 
+@-webkit-keyframes java { 
+from {
+  width: 0%;
+}
+to {
+  width: 60%;
+}
+} 
+@-o-keyframes java { 
+from {
+  width: 0%;
+}
+to {
+  width: 60%;
+}
+} 
+@-ms-keyframes java { 
+from {
+  width: 0%;
+}
+to {
+  width: 60%;
+}
+} 
+@keyframes java { 
+from {
+  width: 0%;
+}
+to {
+  width: 60%;
+}
+} 
+.java {
+  -moz-animation: java 2.5s ease-out;
+  -webkit-animation: java 2.5s ease-out;
+  -o-animation: java 2.5s ease-out;
+  -ms-animation: java 2.5s ease-out;
+  animation: java 2.5s ease-out;
+}
+@-moz-keyframes jquery { 
+from {
+  width: 0%;
+}
+to {
+  width: 70%;
+}
+} 
+@-webkit-keyframes jquery { 
+from {
+  width: 0%;
+}
+to {
+  width: 70%;
+}
+} 
+@-o-keyframes jquery { 
+from {
+  width: 0%;
+}
+to {
+  width: 70%;
+}
+} 
+@-ms-keyframes jquery { 
+from {
+  width: 0%;
+}
+to {
+  width: 70%;
+}
+} 
+@keyframes jquery { 
+from {
+  width: 0%;
+}
+to {
+  width: 70%;
+}
+} 
+.jquery {
+  -moz-animation: jquery 2.5s ease-out;
+  -webkit-animation: jquery 2.5s ease-out;
+  -o-animation: jquery 2.5s ease-out;
+  -ms-animation: jquery 2.5s ease-out;
+  animation: jquery 2.5s ease-out;
+}
+@-moz-keyframes ruby { 
+from {
+  width: 0%;
+}
+to {
+  width: 50%;
+}
+} 
+@-webkit-keyframes ruby { 
+from {
+  width: 0%;
+}
+to {
+  width: 50%;
+}
+} 
+@-o-keyframes ruby { 
+from {
+  width: 0%;
+}
+to {
+  width: 50%;
+}
+} 
+@-ms-keyframes ruby { 
+from {
+  width: 0%;
+}
+to {
+  width: 50%;
+}
+} 
+@keyframes ruby { 
+from {
+  width: 0%;
+}
+to {
+  width: 50%;
+}
+} 
+.ruby {
+  -moz-animation: ruby 2.5s ease-out;
+  -webkit-animation: ruby 2.5s ease-out;
+  -o-animation: ruby 2.5s ease-out;
+  -ms-animation: ruby 2.5s ease-out;
+  animation: ruby 2.5s ease-out;
+}
+@-moz-keyframes mysql { 
+from {
+  width: 0%;
+}
+to {
+  width: 75%;
+}
+} 
+@-webkit-keyframes mysql { 
+from {
+  width: 0%;
+}
+to {
+  width: 75%;
+}
+} 
+@-o-keyframes mysql { 
+from {
+  width: 0%;
+}
+to {
+  width: 75%;
+}
+} 
+@-ms-keyframes mysql { 
+from {
+  width: 0%;
+}
+to {
+  width: 75%;
+}
+} 
+@keyframes mysql { 
+from {
+  width: 0%;
+}
+to {
+  width: 75%;
+}
+} 
+.mysql {
+  -moz-animation: mysql 2.5s ease-out;
+  -webkit-animation: mysql 2.5s ease-out;
+  -o-animation: mysql 2.5s ease-out;
+  -ms-animation: mysql 2.5s ease-out;
+  animation: mysql 2.5s ease-out;
+}
+@-moz-keyframes cpp { 
+from {
+  width: 0%;
+}
+to {
+  width: 40%;
+}
+} 
+@-webkit-keyframes cpp { 
+from {
+  width: 0%;
+}
+to {
+  width: 40%;
+}
+} 
+@-o-keyframes cpp { 
+from {
+  width: 0%;
+}
+to {
+  width: 40%;
+}
+} 
+@-ms-keyframes cpp { 
+from {
+  width: 0%;
+}
+to {
+  width: 40%;
+}
+} 
+@keyframes cpp { 
+from {
+  width: 0%;
+}
+to {
+  width: 40%;
+}
+} 
+.cpp {
+  -moz-animation: cpp 2.5s ease-out;
+  -webkit-animation: cpp 2.5s ease-out;
+  -o-animation: cpp 2.5s ease-out;
+  -ms-animation: cpp 2.5s ease-out;
+  animation: cpp 2.5s ease-out;
+}
+@-moz-keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+@-webkit-keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+@-o-keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+@-ms-keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+@keyframes html5 { 
+from {
+  width: 0%;
+}
+to {
+  width: 80%;
+}
+} 
+.html5 {
+  -moz-animation: html5 2.5s ease-out;
+  -webkit-animation: html5 2.5s ease-out;
+  -o-animation: html5 2.5s ease-out;
+  -ms-animation: html5 2.5s ease-out;
+  animation: html5 2.5s ease-out;
+}
+@-moz-keyframes css { 
+from {
+  width: 0%;
+}
+to {
+  width: 65%;
+}
+} 
+@-webkit-keyframes css { 
+from {
+  width: 0%;
+}
+to {
+  width: 65%;
+}
+} 
+@-o-keyframes css { 
+from {
+  width: 0%;
+}
+to {
+  width: 65%;
+}
+} 
+@-ms-keyframes css { 
+from {
+  width: 0%;
+}
+to {
+  width: 65%;
+}
+} 
+@keyframes css { 
+from {
+  width: 0%;
+}
+to {
+  width: 65%;
+}
+} 
+.css {
+  -moz-animation: css 2.5s ease-out;
+  -webkit-animation: css 2.5s ease-out;
+  -o-animation: css 2.5s ease-out;
+  -ms-animation: css 2.5s ease-out;
+  animation: css 2.5s ease-out;
+}

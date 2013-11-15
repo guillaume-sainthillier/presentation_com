@@ -25,9 +25,10 @@
         <div id="wrap">
             {% include "::menu.html.twig" %}
             <div class="container">
-                <h1 class="titrebloc">{% block body_container_header %}{% endblock %}</h1>
-                <hr/>
-
+                <div class="header text-center">
+                    <h1 class="titrebloc">{% block body_container_header %}{% endblock %}</h1>
+                </div>
+                
                 {# On affiche les messages flash que définissent les contrôleurs du bundle #}
                 {% for key, messages in app.session.flashbag.all() %}
                     {% for message in messages %}

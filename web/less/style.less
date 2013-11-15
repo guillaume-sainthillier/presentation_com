@@ -3,8 +3,12 @@
 @taille-header: 70px;
 @taille-footer: 70px;
 
+@bg_defaut: #f5f0eb;
+
+
 html, body {
     height: 100%;
+    background-color: @bg_defaut;
 }
 
 
@@ -19,11 +23,28 @@ html, body {
     }
 }
 
+.nav .active {
+    border-bottom: 7px solid @bg_defaut;
+}
+
 .footer {
     font-size: 1.2em;
     height: @taille-footer;
     background-color: lighten(@navbar-default-bg, 35%);
     padding: 10px;
+}
+
+
+
+.header {
+
+    background: url('../img/line.png') repeat-x;
+    .titrebloc {
+        background: @bg_defaut;
+        display: inline-block;
+        padding: 5px 20px;
+
+    }
 }
 
 
