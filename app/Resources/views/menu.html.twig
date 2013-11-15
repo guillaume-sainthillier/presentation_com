@@ -1,9 +1,10 @@
 {% set navigation =
 [
-	['accueil', 'Accueil','fa-home'],
 	['cv', 'CV','fa-briefcase'],
 	['parcours', 'Parcours','fa-road'],
-]
+	['attentes', 'Attentes','fa-pagelines'],
+	['personnalite', 'Personnalité','fa-user'],
+	['competences', 'Compétences','fa-list'],]
 %}
 
 
@@ -16,7 +17,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="#"><i>Guillaume Sainthillier</i></a>
+        <a class="navbar-brand" href="{{ path('pc_presentation_page', { 'page': 'accueil' }) }}"><i>Guillaume Sainthillier</i></a>
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">

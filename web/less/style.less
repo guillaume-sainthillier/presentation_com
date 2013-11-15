@@ -1,11 +1,48 @@
+@import 'bs/variables.less';
+
 @taille-header: 70px;
-
-body {
-    padding-top: @taille-header;
-    
-}
-
+@taille-footer: 70px;
 
 html, body {
     height: 100%;
+}
+
+
+#wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -@taille-footer;
+    padding: 0 0 @taille-footer;
+
+    & > .container {
+      padding: @taille-header 15px 0;
+    }
+}
+
+.footer {
+    font-size: 1.2em;
+    height: @taille-footer;
+    background-color: lighten(@navbar-default-bg, 35%);
+    padding: 10px;
+}
+
+
+// Ordi
+@media (min-width: @screen-sm){
+	
+    .navbar-brand {
+        margin-top: 7px;
+        margin-right: 10px;
+    }
+}
+
+//Tablette
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+	
+    #wrap > .container {
+      padding: (@taille-header+50) 15px 0;
+    }
+    .navbar-header {
+        padding-left: 37%;
+    }
 }

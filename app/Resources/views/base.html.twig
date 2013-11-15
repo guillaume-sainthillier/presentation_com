@@ -1,6 +1,6 @@
 {% extends "OryzoneBoilerplateBundle::html5.html.twig" %}
         
-    {% block head_title %}Présentation - {% block title %}{% endblock %}{% endblock %}        
+    {% block head_title %}Guillaume Sainthillier - {% block title %}{% endblock %}{% endblock %}        
         
     {% block head_css %}
         <!-- CSS -->
@@ -22,23 +22,26 @@
     {% endblock %}
                         
     {% block body_container %}
-        {% include "::menu.html.twig" %}
-        <div class="container">
-            <h1 class="titrebloc">{% block body_container_header %}{% endblock %}</h1>
-            <hr/>
+        <div id="wrap">
+            {% include "::menu.html.twig" %}
+            <div class="container">
+                <h1 class="titrebloc">{% block body_container_header %}{% endblock %}</h1>
+                <hr/>
 
-            {# On affiche les messages flash que définissent les contrôleurs du bundle #}
-            {% for key, messages in app.session.flashbag.all() %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ key == "error" ? "danger" : key }}">
-                        <i class="fa fa-{{ key == 'info' ? 'info-sign' : (key == 'error' ? 'warning' : key == 'success' ? 'check' : key) }}"></i> 
-                        {{ message }}
-                    </div>
+                {# On affiche les messages flash que définissent les contrôleurs du bundle #}
+                {% for key, messages in app.session.flashbag.all() %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ key == "error" ? "danger" : key }}">
+                            <i class="fa fa-{{ key == 'info' ? 'info-sign' : (key == 'error' ? 'warning' : key == 'success' ? 'check' : key) }}"></i> 
+                            {{ message }}
+                        </div>
+                    {% endfor %}
                 {% endfor %}
-            {% endfor %}
 
-            {% block body_container_main %}{% endblock %}
+                {% block body_container_main %}{% endblock %}
+            </div>
         </div>
+        {% include "::footer.html.twig" %}
     {% endblock %}
         
     {% block body_js %}
