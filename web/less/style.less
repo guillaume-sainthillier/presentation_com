@@ -1,9 +1,5 @@
-@import 'bs/variables.less';
+@import 'my_variables.less';
 
-@taille-header: 70px;
-@taille-footer: 70px;
-
-@bg_defaut: #f5f0eb;
 
 
 html, body {
@@ -21,6 +17,11 @@ html, body {
     & > .container {
       padding: @taille-header 15px 0;
     }
+}
+
+.titrebloc {
+    color: @couleurSecondaire;
+    text-transform:uppercase;
 }
 
 .nav .active {

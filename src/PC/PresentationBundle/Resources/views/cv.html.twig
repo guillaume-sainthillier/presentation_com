@@ -1,0 +1,27 @@
+{% extends "::base.html.twig" %}
+
+
+{% block title %}
+CV
+{%endblock %}
+
+{% block body_container_header %}
+Mon Curriculum Vitae
+{%endblock %}
+
+
+{% block body_container_main %}
+
+{% endblock %}
+
+
+{% block css %}
+    {% stylesheets 
+        'css/cv.css'
+
+        filter='cssrewrite,?yui_css'
+        output='prod/css/cv.css'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />
+    {% endstylesheets %}
+{% endblock %}

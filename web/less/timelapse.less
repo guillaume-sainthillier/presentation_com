@@ -1,9 +1,6 @@
-@import 'bs/mixins.less';
-@import 'bs/variables.less';
+@import 'my_variables';
 
-@couleurPrincipale: lighten(#cf5037,5%);
-@bgPrincipal: lighten(@couleurPrincipale,37.5%);
-@couleurSecondaire : @brand-primary;
+
 
 //#f5e2c7
 .timelapse {
@@ -105,7 +102,7 @@
                 display: block;
                 content: ' ';
                 position: absolute;
-                border: 2px solid white;
+                border: 2px solid @bg_defaut;
                 width: 25px;
                 height: 12px;
                 border-width: 5px;

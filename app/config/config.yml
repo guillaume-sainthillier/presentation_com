@@ -25,7 +25,11 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
-
+    globals:
+        bp_language: %locale%
+        bp_analytics_id: UA-44318869-1
+        bp_analytics_domain: sainthillier.fr
+        
 # Assetic Configuration
 assetic:
     debug:          %kernel.debug%

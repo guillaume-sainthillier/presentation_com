@@ -1,0 +1,28 @@
+{% extends "::base.html.twig" %}
+
+
+{% block title %}
+Ma personnalité
+{%endblock %}
+
+{% block body_container_header %}
+Mes traits de personnalité
+{%endblock %}
+
+
+
+{% block body_container_main %}
+
+{% endblock %}
+
+
+{% block css %}
+    {% stylesheets 
+        'css/personnalite.css'
+
+        filter='cssrewrite,?yui_css'
+        output='prod/css/personnalite.css'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />
+    {% endstylesheets %}
+{% endblock %}

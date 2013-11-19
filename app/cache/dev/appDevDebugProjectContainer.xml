@@ -2040,6 +2040,18 @@
         <argument>app</argument>
         <argument type="service" id="templating.globals"/>
       </call>
+      <call method="addGlobal">
+        <argument>bp_language</argument>
+        <argument>fr</argument>
+      </call>
+      <call method="addGlobal">
+        <argument>bp_analytics_id</argument>
+        <argument>UA-44318869-1</argument>
+      </call>
+      <call method="addGlobal">
+        <argument>bp_analytics_domain</argument>
+        <argument>sainthillier.fr</argument>
+      </call>
     </service>
     <service id="twig.translation.extractor" class="Symfony\Bridge\Twig\Translation\TwigExtractor">
       <tag name="translation.extractor" alias="twig"/>
