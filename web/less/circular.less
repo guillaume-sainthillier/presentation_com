@@ -1,0 +1,218 @@
+@import 'my_variables';
+
+@taille_wrapper: 27em;
+@taille_bloc: 6.2em;
+@taille_li: 10em;
+@taille_a: 14.5em;
+@taille_btn: 6.5em;
+@z_index: 10;
+@top: 50%;
+@nb_blocs: 7;
+@bg_blocs: #429a67;
+
+
+.component
+{
+    position: relative;
+    margin-bottom: 3em;
+    height: 15em;
+    background: rgba(0,0,0,0.05);
+
+    * {
+        position: relative;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.csstransforms
+{
+    .cn-button
+    {
+	position: absolute;
+	top: 100%;
+	left: @top;
+	z-index: 11;
+	margin-top: -@taille_btn/2;
+	margin-left: -@taille_btn/2;
+	padding-top: 0em;
+	width: @taille_btn;
+	height: @taille_btn;
+	border: none;
+	border-radius: 50%;
+	background: none;
+	background-color: #fff;
+	color: #52be7f;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	cursor: pointer;
+	.backface-visibility(hidden);
+
+    }
+
+    .cn-wrapper
+    {
+        position: absolute;
+        top: 100%;
+        left: @top;
+        z-index: @z_index;
+        margin-top: -@taille_wrapper/2;
+        margin-left: -@taille_wrapper/2;
+        width: @taille_wrapper;
+        height: @taille_wrapper;
+        border-radius: 50%;
+        background: transparent;
+        opacity: 0;
+        .transition(all .3s ease 0.3s);
+        .scale(0.1);
+        pointer-events: none;
+        overflow: hidden; 
+
+        &:after
+        {
+            color: transparent;
+            content:".";
+            display: block;
+            font-size:2em;
+            width:@taille_bloc;
+            height:@taille_bloc;
+            position: absolute;
+            left: @top;
+            margin-left: -@taille_bloc/2;
+            top:@top;
+            margin-top: -@taille_bloc/2;
+            border-radius: 50%;
+            z-index:@z_index;
+        }
+
+        li 
+        {
+            position: absolute;
+            top: @top;
+            left: @top;
+            overflow: hidden;
+            margin-top: -1.3em;
+            margin-left: -@taille_li;
+            width: @taille_li;
+            height: @taille_li;
+            font-size: 1.5em;
+            .transition(all .3s ease);
+            .transform(rotate(76deg) skew(60deg));
+            .transform-origin(100% 100%);
+            pointer-events: none;
+                
+
+            
+            a 
+            {
+                position: absolute;
+                right: -@taille_a/2;
+                bottom: -@taille_a/2;
+                display: block;
+                width: @taille_a;
+                height: @taille_a;
+                border-radius: 50%;
+                //background: @bg_blocs;
+                .radial-gradient(transparent 35%, @bg_blocs 35%, @bg_blocs);
+                color: #fff;
+                text-align: center;
+                text-decoration: none;
+                font-size: 1.2em;
+                line-height: 2;
+                .transition(all .3s ease);
+                .transform(skew(-60deg) rotate(-75deg) scale(1));
+                .backface-visibility(hidden);
+                pointer-events: auto;
+                 
+
+                &:hover, &:active, &:focus
+                {
+                    .radial-gradient(transparent 35%, lighten(@bg_blocs, 5%) 35%);
+                }
+
+                span
+                {
+                    position: relative;
+                    top: 1.8em;
+                    display: block;
+                    font-size: .5em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .opened-nav
+    {
+        border-radius: 50%;
+        opacity: 1;
+        .transition(all .3s ease);
+        .scale(1);
+        pointer-events: auto;
+        
+        li
+        {
+            .transition(all .3s ease .3s);
+        }
+        //.rotateBlocs (@index, @angleDeb, @angleSkew, @pas)
+        .rotateBlocs(@nb_blocs,-20deg,60deg,32deg);
+    }
+}
+
+.no-csstransforms .component
+{
+    .cn-wrapper
+    {
+        margin:10em auto;
+        overflow: hidden;
+        text-align: center;
+        padding:1em;
+    }
+
+    ul
+    {
+        display:inline-block;
+    }
+
+    li
+    {
+        font-size:1em;
+        width:5em;
+        height:5em;
+        float:left;
+        line-height:5em;
+        text-align:center;
+        background-color: #fff;
+
+        a
+        {
+            display:block;
+            height:100%;
+            width:100%;
+            text-decoration: none;
+            color: inherit;
+
+            &:hover, &:active, &:focus
+            {
+                background-color: #f8f8f8;
+            }
+        }
+
+        &.active a
+        {
+            background-color: #6F325C;
+            color: #fff;
+        }
+    }
+    
+    .cn-button
+    {
+        display:none;
+    }
+}

@@ -13,20 +13,44 @@ Parcours professionnel
     set parcours = [
         {
             'annee' : '2013',
-            'titre': 'Blaaaaaaa',
-            'periode':'du blaaa au blaaa',
-            'description': 'bcp de braaaaaaaaaaaaaa'
+            'titre': "<i class='fa fa-book'></i> Master <abbr title='Informatique Collaborative en Entreprise'>ICE</abbr>",
+            'periode':'de Septembre 2013 à Août 2015',
+            'description': ""
         },
         {
             'annee' : '2013',
-            'titre': 'Développeur Web',
-            'periode':'Avril à Juin 2013',
-            'description': 'bcp de braaaaaaaaaaaaaa'
+            'titre': 'TripAndTeuf',
+            'periode':'de Février à Mai',
+            'description': ""
+        },
+        {
+            'annee' : '2013',
+            'titre': 'CHU Purpan',
+            'periode':'Avril à Juin',
+            'description': ""
+        },
+        {
+            'annee' : '2012',
+            'titre': "<i class='fa fa-book'></i> Licence L3 <abbr title='Mathématiques et Informatique Appliqués aux Sciences Humaines et Sociales'>MIASHS</abbr>",
+            'periode':'de Septembre à Juin 2013',
+            'description': ""
         },
         {
             'annee' : '2011',
-            'titre': 'Développeur Web',
+            'titre': 'Développeur Web ICM',
             'periode':'de Janvier 2011 à Juin 2013',
+            'description': 'Maintenance et développement de modules sur une application Web à destination des Polices Municipales. Société ICM Services, CASTANET(31)'
+        },
+        {
+            'annee' : '2010',
+            'titre': "Agent d'entretien",
+            'periode':'de Juin à Juillet',
+            'description': 'Maintenance et développement de modules sur une application Web à destination des Polices Municipales. Société ICM Services, CASTANET(31)'
+        },
+{
+            'annee' : '2009',
+            'titre': "<i class='fa fa-book'></i> <abbr title='Diplôme Universitaire et Technologique'>DUT</abbr> Informatique et Gestion",
+            'periode':'de Septembre 2009 à Juin 2012',
             'description': 'Maintenance et développement de modules sur une application Web à destination des Polices Municipales. Société ICM Services, CASTANET(31)'
         }
     ]
@@ -36,12 +60,12 @@ Parcours professionnel
 <div class="timelapse">
     <ul class="timeline">
         {% set old_annee = '' %}
-        {% for job in parcours %}
+        {% for i,job in parcours %}
             {% if old_annee != job.annee %}
                 <li class="annee">{{ job.annee }}</li>
             {% endif %}
-            <li class="event">
-                <h3 class="titre">{{ job.titre }}</h3>
+            <li class="event {{ i is even ? 'float_gauche' : ''}}">
+                <h3 class="titre">{{ job.titre|raw }}</h3>
                 <span class="mois"><i class="fa fa-calendar"></i> {{ job.periode }}</span>
                 <p>
                     {{ job.description }}

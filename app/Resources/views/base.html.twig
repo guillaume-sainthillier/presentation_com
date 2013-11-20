@@ -16,7 +16,8 @@
         %}
             <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />
         {% endstylesheets %}
-            
+        <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
         {% block css %}
         {% endblock %}
     {% endblock %}

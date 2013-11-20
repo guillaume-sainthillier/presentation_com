@@ -10,6 +10,33 @@
     }
 }
 
+.rotateBlocs (@index, @angleDeb, @angleSkew, @pas) when (@index > 0)
+{
+    li {
+        &:nth-child(@{index})
+        {
+            .transform(rotate(@angleDeb + (( @index - 1 ) * @pas)) skew(@angleSkew));
+        }
+        
+    }
+
+    // next iteration
+    .rotateBlocs(@index - 1, @angleDeb, @angleSkew, @pas);
+}
+
+
+// end the loop when index is 0
+.rotateBlocs (0) {}
+
+
+.transform(@string){
+    -webkit-transform:   @string;
+    -moz-transform: 	 @string;
+    -ms-transform: 	 @string;
+    -o-transform: 	 @string;
+    transform:           @string;
+}
+
 
 
 //.animation-keyframes (html5, 0%, @width_html5, html5 2.5s ease-out);
@@ -41,3 +68,17 @@
   }
 }
 
+.radial-gradient (@color1, @color2) {
+    background: -moz-radial-gradient(center, @color1, @color2);
+    background: -webkit-radial-gradient(center, @color1, @color2);
+    background: radial-gradient(at center, @color1, @color2);
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
+}
+.radial-gradient (@color1, @color2, @color3) {
+    background: @color3;
+    background: -moz-radial-gradient(center, @color1, @color2);
+    background: -webkit-radial-gradient(center, @color1 ,@color2 );
+    background: radial-gradient(at center, @color1 ,@color2);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@{color1}', endColorstr='@{color2}',GradientType=1 );
+}
