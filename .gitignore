@@ -19,8 +19,9 @@ local.properties
 .classpath
 .settings/
 .loadpath
-
-
+composer.lock
+web/prod/
+web/bundles
 
 # External tool builders
 .externalToolBuilders/
