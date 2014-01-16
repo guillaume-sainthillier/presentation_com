@@ -1,3 +1,6 @@
+html body .vert {
+  color: #58b780;
+}
 .component {
   position: relative;
   margin-bottom: 3em;
@@ -26,7 +29,7 @@
   border-radius: 50%;
   background: none;
   background-color: #fff;
-  color: #52be7f;
+  color: #58b780;
   text-align: center;
   font-weight: 700;
   font-size: 1.5em;

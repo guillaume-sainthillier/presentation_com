@@ -11,7 +11,14 @@ Mon Curriculum Vitae
 
 
 {% block body_container_main %}
-
+<div class="text-center" >
+    <div class="col-md-12" id="test">
+        <a class="btn btn-lg btn-default" href="{{ asset('pdf/CV_SAINTHILLIER_Guillaume.pdf') }}"><i class="fa fa-download"></i> Télécharger au format PDF</a>
+        <a class="media" href="{{ asset('pdf/CV_SAINTHILLIER_Guillaume.pdf') }}">CV Guillaume Sainthillier</a>
+    </div>
+</div>
+    
+    
 {% endblock %}
 
 
@@ -24,4 +31,17 @@ Mon Curriculum Vitae
     %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />
     {% endstylesheets %}
+{% endblock %}
+
+{% block js %}
+    {% javascripts 
+       'js/jquery.media.js'
+       'js/jquery.metadata.js'
+       'js/parcours.js'
+
+       filter='?yui_js'
+       output='prod/js/parcours.js'
+    %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 {% endblock %}

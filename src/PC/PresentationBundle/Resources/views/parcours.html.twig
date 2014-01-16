@@ -6,7 +6,7 @@ Parcours
 {%endblock %}
 
 {% block body_container_header %}
-Parcours professionnel
+<span class="rouge">Parcours professionnel</span>
 {%endblock %}
 
 {% 
@@ -14,44 +14,62 @@ Parcours professionnel
         {
             'annee' : '2013',
             'titre': "<i class='fa fa-book'></i> Master <abbr title='Informatique Collaborative en Entreprise'>ICE</abbr>",
-            'periode':'de Septembre 2013 à Août 2015',
-            'description': ""
+            'periode':"de Septembre 2013 à Aujourd'hui",
+            'description': "Le Master ICE apporte la nécessaire maîtrise des techniques et outils de développement informatiques, tout particulièrement dans un contexte collaboratif."
         },
         {
             'annee' : '2013',
-            'titre': 'TripAndTeuf',
-            'periode':'de Février à Mai',
-            'description': ""
+            'titre': 'Développeur Web - CHU Purpan',
+            'periode':"de Avril 2013 à Aujourd'hui",
+            'description': "Conception, développement et maintenance de modules d’une application de gestion des dossiers patients:<br>
+                            • Développement Symfony2. <br>
+                            • Amélioration des interfaces homme-machine. <br>
+                            • Amélioration du système de reporting. <br>
+                            • Sécurisation des données médicales. <br>
+                            • Ouverture du système aux différents partenaires de l'assistance médicale en mer. <br>
+                            • Utilisation de SVN et Git pour les applications de l'entreprise. <br><br>
+                            <span class='italic'>Hôpital de Toulouse - Purpan (31)</span>"
         },
         {
             'annee' : '2013',
-            'titre': 'CHU Purpan',
-            'periode':'Avril à Juin',
-            'description': ""
+            'titre': 'Développeur Web - TripAndTeuf',
+            'periode':'de Février 2013 à Mai 2013',
+            'description': "Maintenance du site de l'association:<br>
+                            • Conception et développement d'un mini-framework. <br>
+                            • Migration du site de PHP 4 à PHP 5.3. <br>
+                            • Utilisation de SVN pour le site de l'association. <br><br>
+                           <span class='italic'>Association TripAndTeuf, Villeneuve la Garenne (92)</span>"
         },
         {
             'annee' : '2012',
             'titre': "<i class='fa fa-book'></i> Licence L3 <abbr title='Mathématiques et Informatique Appliqués aux Sciences Humaines et Sociales'>MIASHS</abbr>",
             'periode':'de Septembre à Juin 2013',
-            'description': ""
+            'description': "La Licence MIASHS associe l'étude des mathématiques et de l'informatique à l'étude d'une discipline dans le domaine des sciences humaines et sociales."
         },
         {
             'annee' : '2011',
-            'titre': 'Développeur Web ICM',
+            'titre': 'Développeur Web - ICM Services',
             'periode':'de Janvier 2011 à Juin 2013',
-            'description': 'Maintenance et développement de modules sur une application Web à destination des Polices Municipales. Société ICM Services, CASTANET(31)'
+            'description': "Maintenance et développement de modules sur une application à destination des Polices Municipales:<br>
+                            • Développement OpenMairie. <br>
+                            • Amélioration du Framework. <br>
+                            • Développement de la plateforme de statistiques. <br>
+                            • Conception et développement d'outils internes. <br>
+                            • Mise en place et utilisation de SVN pour les sites de l'entreprise. <br><br>
+                            <span class='italic'>Société ICM Services, CASTANET(31)</span>"
         },
         {
             'annee' : '2010',
             'titre': "Agent d'entretien",
-            'periode':'de Juin à Juillet',
-            'description': 'Maintenance et développement de modules sur une application Web à destination des Polices Municipales. Société ICM Services, CASTANET(31)'
+            'periode':'de Juin 2009 à Août 2009',
+            'description': "Découverte du monde du travail, intégration dans une équipe. <br /><br />
+                            <span class='italic'>Société ISOR, TOURNEFEUILLE(31)</span>"
         },
 {
             'annee' : '2009',
             'titre': "<i class='fa fa-book'></i> <abbr title='Diplôme Universitaire et Technologique'>DUT</abbr> Informatique et Gestion",
             'periode':'de Septembre 2009 à Juin 2012',
-            'description': 'Maintenance et développement de modules sur une application Web à destination des Polices Municipales. Société ICM Services, CASTANET(31)'
+            'description': 'Le département informatique de l’IUT a pour vocation d’apporter les compétences techniques et les aptitudes professionnelles nécessaires au développement et à la mise en œuvre d’outils informatiques dans les entreprises.'
         }
     ]
 %}
@@ -68,7 +86,7 @@ Parcours professionnel
                 <h3 class="titre">{{ job.titre|raw }}</h3>
                 <span class="mois"><i class="fa fa-calendar"></i> {{ job.periode }}</span>
                 <p>
-                    {{ job.description }}
+                    {{ job.description|raw }}
                 </p>
             </li>
             {% set old_annee = job.annee %}

@@ -4,7 +4,6 @@
 
 /web/bundles/
 /web/prod/
-/app/bootstrap*
 /app/cache/*
 /app/logs/*
 /vendor/
