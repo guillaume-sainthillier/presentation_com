@@ -2,11 +2,11 @@
 ## Symfony
 #################
 
-/web/bundles/
-/web/prod/
+/web/bundles/*
+/web/prod/*
 /app/cache/*
 /app/logs/*
-/vendor/
+/vendor/*
 /app/config/parameters.yml
 
 #################

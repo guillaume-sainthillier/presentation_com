@@ -1,4 +1,4 @@
 $(document).ready(function()
 {
-    $('a.media').media({width:$("#test").width(), height:$("#wrap").height()});
+    $('a.media').media({width: 800, height: 1200});
 });

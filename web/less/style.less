@@ -7,13 +7,17 @@ html, body {
     background-color: @bg_defaut;    
 }
 
+.body, footer {
+    font-size: 17px;
+}
+
 
 #wrap {
     min-height: 100%;
     height: auto;
     margin: 0 auto -@taille-footer;
     padding: 0 0 @taille-footer;
-    font-size: 105%;
+    
 
     & > .container {
       padding: @taille-header 15px 0;
@@ -36,7 +40,10 @@ html, body {
     padding: 10px;
 }
 
-
+address {
+    margin-bottom: 0px;
+    padding-top: 15px;
+}
 
 .header {
 
@@ -46,6 +53,15 @@ html, body {
         display: inline-block;
         padding: 5px 20px;
 
+    }
+}
+
+h2 {
+
+    margin-bottom: 30px;
+
+    span {
+        border-bottom: 2px solid @navbar-default-bg;
     }
 }
 

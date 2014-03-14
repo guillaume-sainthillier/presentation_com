@@ -2,4 +2,4 @@ pc_presentation_page:
     pattern:  /{page}
     defaults: { _controller: PCPresentationBundle:Page:index, page: accueil }
     requirements:
-        page:  accueil|cv|parcours|attentes|personnalite|competences|interets|motivations
+        page:  accueil|cv|parcours|attentes|personnalite|competences|interets|motivations|complement

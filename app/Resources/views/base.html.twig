@@ -19,11 +19,20 @@
         {% block css %}
         {% endblock %}
     {% endblock %}
-                        
+                
+    {% block body_chromeframe %}
+        <!--[if lt IE 8]>
+            <div class="alert alert-warning alert-dismissable">
+                Vous utilisez un navigateur <strong>dépassé</strong>
+                Veuillez le <a href="http://browsehappy.com/">mettre à jour</a> pour améliorer votre expérience sur Toulouse By Night.
+            </div>
+        <![endif]-->
+    {% endblock %}
+        
     {% block body_container %}
         <div id="wrap">
             {% include "::menu.html.twig" %}
-            <div class="container">
+            <div class="container body">
                 <div class="header text-center">
                     <h1 class="titrebloc">{% block body_container_header %}{% endblock %}</h1>
                 </div>
