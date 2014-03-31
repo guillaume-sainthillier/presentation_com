@@ -1,4 +1,6 @@
 $(document).ready(function()
 {
-    $('.banner').unslider();
+    $('.flexslider').flexslider({
+        animation: "slide"
+    });
 });

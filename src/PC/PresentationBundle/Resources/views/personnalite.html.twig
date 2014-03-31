@@ -26,13 +26,52 @@ Ma personnalité
          </ul>
     </div>
 </div>
+<br />
+<br />
+<br />
+<br />
+<div class="header text-center">
+    <h1 class="titrebloc">
+        <span class="">Mes centres d'intérêts</span>
+    </h1>
+</div>
 
-<div class="banner">
-    <ul>
-        <li>This is a slide.</li>
-        <li>This is another slide.</li>
-        <li>This is a final slide.</li>
-    </ul>
+{% set images = 
+    {
+        'voyage.jpg' : "
+<h3>Les voyages</h3>
+<blockquote>
+    <p>J'ai eu le chance d'avoir pu voyager dans divers pays durant mon enfance. Ces voyages ont tous laissés de très bons souvenirs gravés dans ma mémoire.</p>
+    <small>J'ai pris cette photo à Punta Cana (République Dominicaine) en décembre 2008</small>
+</blockquote>
+",
+        'roller.jpg' : "
+<h3>Le sport</h3>
+<blockquote>
+    <p>J'ai pratiqué le roller pendant près de 10 ans durant mon enfance.</p>
+    <small>Les sorties roller sont toujours un excellent moment !</small>
+</blockquote>
+",
+        'festival.jpg' : "
+<h3>Les festivals</h3>
+<blockquote>
+    <p>Les festivals en Belgique et aux Pays-Bas sont incomparables à ceux en France. Depuis mes 18 ans, j'y vais une fois par an pour décompresser totalement et faire le plein d'energie!</p>
+    <small>J'étais à ce festival situé à Arnhem (Pays-Bas) en août 2012</small>
+</blockquote>
+"
+    }
+%}
+
+<br />
+<div class="flexslider">
+    <ul class="slides">
+        {% for image, texte in images %}
+            <li>
+                {{ texte|raw }}
+                <img src="{{ asset('img/interets/' ~ image) }}" />
+            </li>
+        {% endfor %}
+  </ul>
 </div>
 {% endblock %}
 
@@ -40,6 +79,7 @@ Ma personnalité
 {% block css %}
     {% stylesheets 
         'css/personnalite.css'
+        'css/flexslider.css'
 
         filter='cssrewrite,?yui_css'
         output='prod/css/personnalite.css'
@@ -51,7 +91,7 @@ Ma personnalité
 {% block js %}
     {% javascripts 
        'js/circular.js'
-        'js/unslider.min.js'
+        'js/jquery.flexslider.js'
         'js/personnalite.js'
 
        filter='?yui_js'
