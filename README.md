@@ -11,6 +11,3 @@ Le contenu obligatoire à trouver sur le site est:
    - les traits de personnalité ainsi que les centres d'intêrets
    - les motivations
 
-
-### Démo
-Une démonstration en ligne du site est disponible sur http://guillaume.sainthillier.fr
